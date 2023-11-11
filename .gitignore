@@ -54,3 +54,13 @@ build-iPhoneSimulator/
 
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
+
+
+# To ignore checking simplecov files
+/coverage/
+
+# Ignore macOs specifc
+.DS_Store
+
+# Ignore js-related files
+/node_modules/
