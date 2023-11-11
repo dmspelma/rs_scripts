@@ -1,0 +1,33 @@
+require:
+  - rubocop-rspec
+
+# for rubocop-rspec
+RSpec/FilePath:
+  Enabled: false
+RSpec/SpecFilePathFormat:
+  Enabled: false
+RSpec/ExampleLength:
+  Max: 20 # some methods require more complex tests to verify
+  CountAsOne: ['array','hash']
+RSpec/MultipleExpectations:
+  Max: 10
+
+AllCops:
+  TargetRubyVersion: 3.1.1
+  NewCops: enable
+  Exclude:
+    - 'lib/rs_api/patches/*'
+Gemspec/RequireMFA:
+  Enabled: false
+Layout/CaseIndentation:
+  EnforcedStyle: end
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+Lint/MissingSuper:
+  Enabled: false # Exclude doesn't seem to work??
+Metrics/AbcSize:
+  Max: 20
+Metrics/BlockLength:
+  Max: 40
+Metrics/MethodLength:
+  Max: 25
